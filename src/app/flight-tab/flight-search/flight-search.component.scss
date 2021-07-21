@@ -1,0 +1,152 @@
+.search-header{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 510px;
+    margin-left: -3%;
+    background-color: blue
+}
+
+.back-arrow{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-left: 5px;
+}
+
+.flight-information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white
+}
+
+.edit {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    img{
+        filter: invert(1) ;
+    }
+}
+
+.flight-stoppage-time , .flight-fare-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+}
+
+.horizontal-line{
+    width: 100px;
+}
+
+.flight-start-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px
+}
+
+.flight-journey-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.flight-end-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5px
+}
+
+.basic-economy-information{
+   margin-left: 5px;
+}
+
+.basic-economy-price {
+    border: #2782a1;
+    background-color: #2782a1;
+    width: 140px;
+    padding-top: 12px;
+    color: white;
+    border-radius: 2.5px;
+    margin-top: -10px;
+}
+
+.price{
+    padding: 2px;
+}
+
+.class-type{
+    padding: 2px;
+}
+
+.economy-seat-information {
+    background-color:#2782a1;
+    width: 100px;
+    color: white;
+    margin-left: 35px;
+    text-align: end;
+    z-index: 1;
+}
+
+.left-arrow:hover{
+    cursor: pointer;
+}
+
+.sort {
+    background-color : white;
+    color: #4658da;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: white;
+}
+
+.sort:hover{
+    cursor: pointer;
+}
+
+#sortbutton {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    margin-left: 140px;
+    justify-content: center;
+}
+
+.sort-header , .filter-header{
+    display: flex;
+    background-color: blue;
+    color: white;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.radio {
+    padding: 10px;
+}
+
+.sort-button {
+    border: #2782a1;
+    background-color: #2782a1;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+    border-radius: 2.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sort-button:hover{
+  cursor: pointer;
+}

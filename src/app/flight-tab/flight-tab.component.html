@@ -1,0 +1,6 @@
+<div *ngIf="pageSelector==='flightContent'">
+    <app-flight-content-form (flightSearchPage)="onPageSwitch($event)"></app-flight-content-form>
+</div>
+<div *ngIf="pageSelector==='flightSearch'">
+    <app-flight-search (flightContentPage)="onPageSwitch($event)"></app-flight-search>
+</div>

@@ -1,0 +1,46 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    padding-inline-start: 0px;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-flex;
+    padding :10px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.nav-links a:hover{
+    cursor: pointer;
+    color: blue;
+
+    img{
+        filter: invert(40%) sepia(90%) saturate(528%) hue-rotate(151deg) brightness(92%) contrast(76%);
+    }
+}
+
+.nav-links .current-tab{
+    color: blue;
+
+    img{
+        filter: invert(40%) sepia(90%) saturate(528%) hue-rotate(151deg) brightness(92%) contrast(76%);
+    }
+}
+
+
+
+
+

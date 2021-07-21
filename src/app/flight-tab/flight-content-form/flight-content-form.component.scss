@@ -1,0 +1,49 @@
+.flight-content-form{
+    margin-top: 25px;
+}
+
+#input-content{
+    width: 500px;
+    height: 25px;
+    margin-bottom: 12px;
+}
+
+#input-date ,#input-number {
+    width: 225px;
+    height: 25px;
+    margin-right: 50px;
+    margin-bottom: 12px;
+}
+
+.input-header{
+    margin-right: 200px
+}
+
+.input-header-traveller{
+    margin-right: 220px
+}
+
+#input-class{
+    width: 225px;
+    height: 28px;
+    margin-right: 50px;
+    margin-bottom: 12px;
+}
+
+.search-flight {
+    border: #2782a1;
+    background-color: #2782a1;
+    width: 510px;
+    height: 50px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+    border-radius: 2.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.search-flight:hover {
+    cursor: pointer;
+    background-color: blue;
+}

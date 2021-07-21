@@ -1,0 +1,97 @@
+<div class="search-header">
+    <div class="back-arrow">
+        <span class="left-arrow" (click)="goToFlightContent()">&#8592;</span>
+    </div>
+    <div class="flight-information">
+        <div class="connecting-cities">
+            {{searchStartCity| slice:-4:-1}} <span class="right-arrow">&#8594;</span> {{searchArrivalCity | slice:-4:-1}}
+        </div>
+        <div class="dates-travellers">
+            {{searchDepartDate | date:'mediumDate' | slice: 0 :6}} - {{searchReturnDate | date:'mediumDate' | slice: 0 :6}} | {{searchNumberofTravelers}} Travelers
+        </div>
+    </div>
+    <div class="edit">
+        <img src="../assets/pencil.png" alt="">
+    </div>
+</div>
+<div *ngFor="let searchfilteredFlight of searchfilteredFlights" class="searched-flight-information">
+    <div class="flight-name">
+        <img src="../assets/airplane-active.png" alt="">  {{searchfilteredFlight._id}}
+    </div>
+    <div class="flight-stoppage-time">
+        <div class="flight-start-information">
+            <div class="flight-departure-time">{{searchfilteredFlight.depart}}</div>
+            <div class="flight-departure-city">{{searchfilteredFlight.from_city_id}}</div>
+        </div>
+        <div class="flight-journey-information">
+            <div class="flight-total-time">{{searchfilteredFlight.duration}}</div>
+            <div class="horizontal-line">
+               <hr>
+            </div>
+            <div class="flight-stop">{{searchfilteredFlight.stop}}</div>
+        </div>
+        <div class="flight-end-information">
+            <div class="flight-arriving-time">{{searchfilteredFlight.arrive}}</div>
+            <div class="flight-arriving-city">{{searchfilteredFlight.to_city_id}}</div>
+        </div>
+    </div>
+    <div class="flight-fare-information">
+        <div class="basic-economy-information">
+            <div class="economy-seat-information">
+                <span class="basic-economy-seat">
+                    {{searchfilteredFlight.basicEconomySeatLeft}}
+                </span>
+            </div>
+            <div class="basic-economy-price">
+               <div class="price">${{searchfilteredFlight.basicEconomyPrice}}</div>
+               <div class="class-type">Basic Economy</div>
+            </div>
+        </div>
+        <div class="basic-economy-information">
+            <div class="economy-seat-information">
+                <span class="basic-economy-seat">
+                    {{searchfilteredFlight.mainCabinSeatLeft}}
+                </span>
+            </div>
+            <div class="basic-economy-price">
+               <div class="price">${{searchfilteredFlight.mainCabinPrice}}</div>
+               <div class="class-type">Main Cabin</div>
+            </div>
+        </div>
+        <div class="basic-economy-information">
+            <div class="economy-seat-information">
+                <span class="basic-economy-seat">
+                    {{searchfilteredFlight.economySeatLeft}}
+                </span>
+            </div>
+            <div class="basic-economy-price">
+               <div class="price">${{searchfilteredFlight.economyPrice}}</div>
+               <div class="class-type">Economy</div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+</div>
+<div id="sortbutton">
+    <button class="sort" (click)="openModal('custom-modal-1')">Sort by</button>
+    <button class="sort" >Filters</button>
+</div>
+
+<cx-modal id="custom-modal-1">
+    <div class="sort-header">
+        Sort by
+    </div>
+    <form [formGroup]="sortMethodForm">
+        <div class="radio" *ngFor="let sortMethod of sortMethods">
+            <label>
+              <input type="radio" formControlName="sortMethod" [value]="sortMethod">
+              {{sortMethod}}
+            </label>
+          </div>
+        <button class="sort-button" (click)="sortSeachFlight('custom-modal-1');">Done</button>
+    </form>
+</cx-modal>
+
+
+

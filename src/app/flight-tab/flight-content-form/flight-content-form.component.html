@@ -1,0 +1,39 @@
+<form [formGroup]="flightContentForm" (ngSubmit)="goToFlightSearch()">
+    <div class="flight-content-form">
+        <div class="input-header">
+            <label>Departure</label>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="departure" id="input-content" class="form-control" placeholder="Airport or City" >
+        </div>
+        <div class="input-header">
+            <label>Destination</label>
+        </div>
+        <div class="form-group" >
+            <input type="text" formControlName="destination" id="input-content" class="form-control" placeholder="Airport or City" >
+        </div>
+        <div >
+            <label class="input-header">Depart Date</label>
+            <label class="input-header">Return Date</label>
+        </div>
+        <div class="form-group">
+            <input type="date" id="input-date" formControlName="departdate" class="form-control">
+            <input type="date" id="input-date" formControlName="returndate" class="form-control">
+        </div>
+        <div >
+            <label class="input-header-traveller">Travelers</label>
+            <label class="input-header">Class</label>
+        </div>
+        <div class="form-group">
+            <input type="number" id="input-number"  formControlName="travelers" class="form-control" value="1" >
+            <select id="input-class" formControlName="seatclass" class="form-control"  >
+                <option value="1" >Basic Economy</option>
+                <option value="2">Main Cabin</option>
+                <option value="3">Economy</option>
+            </select>
+        </div>
+        <div class="button-search-flight">
+            <button class="search-flight" [disabled]="!flightContentForm.valid" type="submit">Search Flights</button>
+        </div>
+    </div>
+</form>
